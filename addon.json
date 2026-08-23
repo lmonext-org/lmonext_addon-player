@@ -1,0 +1,63 @@
+{
+    "name": "player",
+    "version": "1.4.0",
+    "description": {
+        "de": "Spielerstatistik mit Spaltenverwaltung, Foto-Upload und CSV-Import.",
+        "en": "Player statistics with column management, photo upload and CSV import."
+    },
+    "author": "Dietmar Kersting, Torsten Hofmann",
+    "license": "GPL-3.0-only",
+    "homepage": "https://github.com/lmonext/addon-player",
+    "min_core_version": "1.4.0",
+    "type": "both",
+    "admin_actions": [
+        "spielerstatistik",
+        "spst_import_review"
+    ],
+    "admin_nav": [
+        {
+            "action": "spielerstatistik",
+            "icon": "📊",
+            "label_key": "nav_spielerstatistik",
+            "position": 50
+        }
+    ],
+    "frontend_routes": [
+        "spielerstatistik"
+    ],
+    "admin_handlers": [
+        "handler_spielerstat.php",
+        "spielerstat_import.php"
+    ],
+    "frontend_handlers": [
+        "spielerstat_lib.php",
+        "frontend_spielerstat.php",
+        "hooks_frontend.php"
+    ],
+    "admin_views": [
+        {
+            "action": "spielerstatistik",
+            "file": "view_spielerstatistik.php"
+        },
+        {
+            "action": "spst_import_review",
+            "file": "view_spst_import_review.php"
+        }
+    ],
+    "frontend_views": [],
+    "templates_dir": "templates/",
+    "lang_dir": "lang/",
+    "hooks": [
+        {
+            "event": "team.saved",
+            "handler": "playerOnTeamSaved",
+            "priority": 10
+        }
+    ],
+    "dependencies": [],
+    "db_tables": [
+        "lmo_spielerstat_spalten",
+        "lmo_spielerstat_spieler",
+        "lmo_spielerstat_config"
+    ]
+}
