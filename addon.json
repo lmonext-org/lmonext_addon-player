@@ -1,6 +1,6 @@
 {
     "name": "player",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "description": {
         "de": "Spielerstatistik mit Spaltenverwaltung, Foto-Upload und CSV-Import.",
         "en": "Player statistics with column management, photo upload and CSV import."
@@ -8,7 +8,7 @@
     "author": "Dietmar Kersting, Torsten Hofmann",
     "license": "GPL-3.0-only",
     "homepage": "https://github.com/henshingly/addon-player",
-    "min_core_version": "1.4.0",
+    "min_core_version": "1.9.0",
     "type": "both",
     "admin_actions": [
         "spielerstatistik",
