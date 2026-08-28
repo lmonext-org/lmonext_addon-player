@@ -1,13 +1,13 @@
 {
     "name": "player",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": {
         "de": "Spielerstatistik mit Spaltenverwaltung, Foto-Upload und CSV-Import.",
         "en": "Player statistics with column management, photo upload and CSV import."
     },
     "author": "Dietmar Kersting, Torsten Hofmann",
     "license": "GPL-3.0-only",
-    "homepage": "https://github.com/henshingly/lmonext_addon-player",
+    "homepage": "https://github.com/henshingly/addon-player",
     "min_core_version": "1.9.0",
     "type": "both",
     "admin_actions": [
@@ -56,8 +56,10 @@
     ],
     "dependencies": [],
     "db_tables": [
-        "lmo_spielerstat_spalten",
-        "lmo_spielerstat_spieler",
-        "lmo_spielerstat_config"
+        "spielerstat_spalten",
+        "spielerstat_spieler",
+        "spielerstat_werte",
+        "spielerstat_config",
+        "spieler_global"
     ]
 }

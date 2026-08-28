@@ -32,3 +32,14 @@ CHANGELOG.md des LMOnext-Kernprojekts unter den Abschnitten
   als jede real existierende LMOnext-Version - AddonManager konnte damit nie
   eine zu alte Core-Version blockieren). "1.9.0" ist die tatsächliche
   LMOnext-Core-Version, ab der der Addon-Manager überhaupt existiert.
+
+## Version 1.4.2
+
+- Bugfix: "db_tables" in addon.json korrigiert - die bisherige Deklaration
+  war unvollständig und teils falsch benannt (echte Tabellen: 
+  spielerstat_spalten, spielerstat_spieler, spielerstat_werte,
+  spielerstat_config, spieler_global - OHNE DB-Präfix). Insbesondere
+  fehlten spielerstat_werte und spieler_global komplett. Betraf bisher
+  keine sichtbare Funktion, wäre aber beim neuen "Daten löschen"-Feature
+  im Addon-Manager (siehe Core-CHANGELOG.md src/Addon/AddonManager.php
+  1.4.0) auf einen unvollständigen Cleanup hinausgelaufen.
